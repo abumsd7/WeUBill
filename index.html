@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WeUBill</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <link rel="stylesheet" href="styli.css" />
+  <link rel="shortcut icon" href="logo.png">
+  <script src="/__/firebase/7.5.0/firebase-app.js"></script>
+  <script src="/__/firebase/7.5.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-database.js"></script>
+  <!--script src="/__/firebase/init.js"></script-->
+  <script>var config = {
+    apiKey: "AIzaSyBClC6z6hWi-3ZBTYUlv1DRmHw_RIjGYeA",
+    authDomain: "webbill-58535.firebaseapp.com",
+    databaseURL: "https://webbill-58535.firebaseio.com",
+    storageBucket: "webbill-58535.appspot.com",
+	projectId: "webbill-58535",
+    storageBucket: "webbill-58535.appspot.com",
+    appId: "1:609982610196:web:7e8e8061c25e1716a0e001"
+  };
+  firebase.initializeApp(config);
+  </script>
+  
+</head>
+<body>
+  <div id="img" class="img-disp"><img class="img-att" src="banner.png" alt="banner" align="center"></div>
+  <div id="login_div" class="main-div">
+    <h3>Create an account now!</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onClick="signup()">New User Here? Sign Up!</button>
+    <button onClick="signin()">Existing User? Sign In.</button>
+  </div>
+
+  <div id="user_div" class="main-div">
+  	<button color="black" onClick="instedit()">Add/Update School</button>
+    <button color="black" onClick="billedit()">Create/Update Bill</button>
+    <button color="black" onClick="billopen()">View Existing Bills</button>
+    <h5 id="user_para">.</h5>
+    <button onClick="logout()" style="background-color:#B63639" class="signout">Sign Out</button>
+  </div>
+    <div id="bill-edit" class="main-div">
+  	<h3>Enter the details below.</h3>
+    <!--form id ="bill-detail"-->
+    <input type="text" placeholder="Serial No." id="sno" />
+    <input type="text" placeholder="Register No." id="reg-no" />
+    <input type="text" placeholder="Class-Section" id="class" />
+    <input type="text" placeholder="Name (in caps)" id="name" />
+    <input type="text" placeholder="Hostel Fees" id="hostel" />
+    <button id="addBtn" onClick="billsubmit()">Store in Server</button>
+    <button onClick="back()">Back to Main Menu</button>
+    <button onClick="logout()" style="background-color:#B63639" class="signout">Sign Out</button>
+  </div>
+   <div id="inst-edit" class="main-div">
+  	<h3>Enter the details below.</h3>
+    <input type="text" placeholder="Institution name" id="inst-name" />
+    <input type="text" placeholder="Address" id="addr" />
+    <input type="text" placeholder="Ph-no." id="phno" />
+    <input type="text" placeholder="Website" id="web-link" />
+    <button id="instBtn" onclick="instsubmit()">Store in Server</button>
+    <button onClick="back()">Back to Main Menu</button>
+    <button onClick="logout()" style="background-color:#B63639" class="signout">Sign Out</button>
+  </div>
+  <div id="bill-open" class="main-div">
+  	<input type="text" placeholder="Serial No." id="sno2" />
+    <button id="viewBtn" onClick="billdisplay()">View</button>
+    <button onClick="back()">Back to Main Menu</button>
+    <button onClick="logout()" style="background-color:#B63639" class="signout">Sign Out</button>
+  </div>
+  <div id="bill-display" class="main-div">
+  	<table align="center" id="insttable" class="table2">
+    </table>
+    <table align="center" id="table">
+    </table>
+    </br>
+    <button onClick="back()">Back to Main Menu</button>
+    <button onClick="logout()" style="background-color:#B63639" class="signout">Sign Out</button>
+  </div>
+  <script src="indut.js"></script>
+
+</body>
+</html>
