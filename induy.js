@@ -180,10 +180,10 @@ function billsubmit()
 	addBtn.addEventListener("click", e => {
   	e.preventDefault();
   	usersRef.child(sno).set({
-    "a.Register No": reg,
-    "c.Class": clas,
-    "b.Name": name,
-	"d.Hostel Fees":hostel,
+    "Register No": reg,
+    "Class": clas,
+    "Name": name,
+	"Hostel Fees":hostel,
   	});
 	});
 }
@@ -203,10 +203,10 @@ function instsubmit()
 	instBtn.addEventListener('click', e => {
 	e.preventDefault();
  	usersRef.child("Institution Details").set({
-    "a": inst,
-    "b": addr,
-    "c": phno,
-	"d":website,
+    "institution": inst,
+    "address": addr,
+    "phone": phno,
+	"website":website,
   });
 });
   
