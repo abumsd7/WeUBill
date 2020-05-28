@@ -112,7 +112,8 @@ function billdisplay()
 	var fragment = document.createDocumentFragment();
 	var table = document.getElementById("table");
 	var table2 = document.getElementById("insttable");
-	var str = document.getElementById("email_field").value;
+	var user = firebase.auth().currentUser;
+	var str = user.email;
 	var res = str.split("@");
 	var email = res[0].replace(/[^a-zA-Z0-9]/g, '');
 	var que = firebase.database().ref("/"+email+"/Institution Details");
@@ -164,7 +165,7 @@ function back()
 function billsubmit()
 {
 	var user = firebase.auth().currentUser;
-	var str = document.getElementById("email_field").value;
+	var str = user.email;
 	var res = str.split("@");
 	var email = res[0].replace(/[^a-zA-Z0-9.]/g, '');
 	var sno = document.getElementById("sno").value.toString();
@@ -188,7 +189,7 @@ function billsubmit()
 }
 function instsubmit()
 {   var user = firebase.auth().currentUser;
-	var str = document.getElementById("email_field").value;
+	var str = user.email;
 	var res = str.split("@");
 	var email = res[0].replace(/[^a-zA-Z0-9]/g, '');
 	var inst = document.getElementById("inst-name").value;
