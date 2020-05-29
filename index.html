@@ -21,7 +21,7 @@
                 doc.text(35,85,"Bill No:");
                 doc.text(140,85,"Date:");
                 doc.text(60,85,bno);
-                doc.autoTable({ html: '#insttable' , margin: {top:95 ,left:35 , right:35} , styles:{ fontSize: number=16 , fontStyle: 'bold', halign: 'center' , valign: 'center', theme: 'css' , fillColor: [255,255,255] , textColor:[0,0,0] } });
+                doc.autoTable({ html: '#insttable' , margin: {top:95 ,left:35 , right:35} , styles:{ fontSize: number=16 , fontStyle: 'bold', halign: 'center' , valign: 'center', cellPadding: Padding=5 , theme: 'css' , fillColor: [255,255,255] , textColor:[0,0,0] } });
                 doc.autoTable({ html: '#table' ,  columnStyles: { 0: { fontStyle: 'bolditalic' }, 1:{ lineWidth: number=1 , lineColor:[0,0,0]}}, margin: {top:130 ,left:35 , right:35} , styles:{ fontSize: number=14  }});
                 doc.text(35,260,"Sign of Student");
                 doc.text(150,260,"Seal");
@@ -109,7 +109,7 @@
     <button onClick="back()">Back to Main Menu</button>
     <button onClick="logout()" style="background-color:#B63639" class="signout">Sign Out</button>
   </div>
-  <script src="indua.js"></script>
+  <script src="indub.js"></script>
 
 </body>
 </html>
