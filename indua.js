@@ -180,10 +180,10 @@ function billsubmit()
 	addBtn.addEventListener("click", e => {
   	e.preventDefault();
   	usersRef.child(sno).set({
-    "a.Register No": reg,
-    "c.Class": clas,
-    "b.Name": name,
-	"d.Hostel Fees":hostel,
+    "a:Register No": reg,
+    "c:Class": clas,
+    "b:Name": name,
+	"d:Hostel Fees":hostel,
   	});
 	});
 }
