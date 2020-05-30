@@ -8,7 +8,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 	document.getElementById("bill-edit").style.display = "none";
 	document.getElementById("bill-open").style.display = "none";
 	document.getElementById("bill-display").style.display = "none";
-
+	document.getElementById("back-log").style.display = "block";
 
     var user = firebase.auth().currentUser;
 
@@ -28,6 +28,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 	document.getElementById("bill-edit").style.display = "none";
 	document.getElementById("bill-open").style.display = "none";
 	document.getElementById("bill-display").style.display = "none";
+	document.getElementById("back-log").style.display = "none";
 
 
   }
@@ -75,6 +76,7 @@ function instedit()
 	document.getElementById("bill-edit").style.display = "none";
 	document.getElementById("bill-open").style.display = "none";
 	document.getElementById("bill-display").style.display = "none";
+	document.getElementById("back-log").style.display = "block";
 
 	
 }
@@ -87,6 +89,7 @@ function billedit()
 	document.getElementById("bill-edit").style.display = "block";
 	document.getElementById("bill-open").style.display = "none";
 	document.getElementById("bill-display").style.display = "none";
+	document.getElementById("back-log").style.display = "block";
 
 	
 }
@@ -99,6 +102,7 @@ function billopen()
 	document.getElementById("bill-edit").style.display = "none";
 	document.getElementById("bill-open").style.display = "block";
 	document.getElementById("bill-display").style.display = "none";
+	document.getElementById("back-log").style.display = "block";
 	
 }
 function billdisplay()
@@ -109,6 +113,7 @@ function billdisplay()
 	document.getElementById("bill-edit").style.display = "none";
 	document.getElementById("bill-open").style.display = "none";
 	document.getElementById("bill-display").style.display = "block";
+	document.getElementById("back-log").style.display = "block";
 	var fragment = document.createDocumentFragment();
 	var table = document.getElementById("table");
 	var table2 = document.getElementById("insttable");
